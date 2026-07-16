@@ -18,17 +18,28 @@
    <children>
       <VBox maxWidth="450.0" minWidth="400.0" prefHeight="768.0" prefWidth="450.0" styleClass="login-container">
          <children>
-            <Region prefHeight="80.0" prefWidth="450.0" />
+            <Region prefHeight="55.0" prefWidth="450.0" />
             <VBox prefHeight="90.0" prefWidth="450.0">
                <children>
                   <Label styleClass="form-title" text="Welcome Back !" />
-                  <Label prefHeight="23.0" prefWidth="466.0" styleClass="form-subtitle" text="Log in to start managing the insurrance contracts with ease." />
+                  <Label prefHeight="23.0" prefWidth="466.0" styleClass="form-subtitle" text="Sign up to start managing the insurrance contracts with ease." />
                </children>
             </VBox>
-            <VBox prefHeight="100.0" prefWidth="450.0" styleClass="input-group">
+            <VBox prefHeight="90.0" prefWidth="450.0" styleClass="input-group">
+               <children>
+                  <Label styleClass="input-label" text="Nom" />
+                  <TextField fx:id="tfName" prefHeight="28.0" prefWidth="450.0">
+                     <styleClass>
+                        <String fx:value="text-field" />
+                        <String fx:value="password-field" />
+                     </styleClass>
+                  </TextField>
+               </children>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="190.0" prefHeight="88.0" prefWidth="450.0" styleClass="input-group">
                <children>
                   <Label styleClass="input-label" text="Email" />
-                  <TextField prefHeight="28.0" prefWidth="450.0">
+                  <TextField fx:id="tfEmail" prefHeight="28.0" prefWidth="450.0">
                      <styleClass>
                         <String fx:value="text-field" />
                         <String fx:value="password-field" />
@@ -39,19 +50,17 @@
             <VBox prefHeight="89.0" prefWidth="450.0" styleClass="input-group">
                <children>
                   <Label styleClass="input-label" text="Password" />
-                  <TextField prefHeight="25.0" prefWidth="450.0" styleClass="password-field" />
+                  <TextField fx:id="tfPassword" prefHeight="25.0" prefWidth="450.0" styleClass="password-field" />
                </children>
             </VBox>
             <HBox prefHeight="49.0" prefWidth="450.0" styleClass="options-row">
                <children>
                   <CheckBox mnemonicParsing="false" prefHeight="20.0" prefWidth="122.0" styleClass="checkbox" text="Remenber me" />
-                  <Region prefHeight="31.0" prefWidth="218.0" HBox.hgrow="ALWAYS" />
-                  <Hyperlink prefHeight="20.0" prefWidth="125.0" text="Forgot password?" textAlignment="RIGHT" />
                </children>
             </HBox>
             <HBox prefHeight="92.0" prefWidth="450.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="46.0" prefWidth="448.0" styleClass="btn-primary" text="Login" />
+                  <Button fx:id="btnLogin" mnemonicParsing="false" prefHeight="46.0" prefWidth="448.0" styleClass="btn-primary" text="Sign Up" />
                </children>
             </HBox>
             <HBox prefHeight="43.0" prefWidth="450.0">
@@ -74,9 +83,9 @@
             </VBox>
             <HBox prefHeight="30.0" prefWidth="450.0">
                <children>
-                  <Label text="Don't have an account ?" />
+                  <Label text="Already have an account ?" />
                   <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
-                  <Hyperlink text="Sign up Here" />
+                  <Hyperlink fx:id="hplSingin" text="Sign in" />
                </children>
             </HBox>
          </children>
