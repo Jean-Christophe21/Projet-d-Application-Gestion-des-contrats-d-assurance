@@ -17,9 +17,13 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("primary"), 640, 480);
+        try{
+        scene = new Scene(loadFXML("login_form"), 1200, 800);
         stage.setScene(scene);
         stage.show();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
     }
 
     static void setRoot(String fxml) throws IOException {
@@ -27,7 +31,7 @@ public class App extends Application {
     }
 
     private static Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/fxml/" + fxml + ".fxml"));
         return fxmlLoader.load();
     }
 
