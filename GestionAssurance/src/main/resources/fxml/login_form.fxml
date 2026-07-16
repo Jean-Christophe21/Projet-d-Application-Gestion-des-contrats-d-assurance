@@ -28,7 +28,7 @@
             <VBox prefHeight="100.0" prefWidth="450.0" styleClass="input-group">
                <children>
                   <Label styleClass="input-label" text="Email" />
-                  <TextField prefHeight="28.0" prefWidth="450.0">
+                  <TextField fx:id="tfEmail" prefHeight="28.0" prefWidth="450.0">
                      <styleClass>
                         <String fx:value="text-field" />
                         <String fx:value="password-field" />
@@ -39,7 +39,7 @@
             <VBox prefHeight="89.0" prefWidth="450.0" styleClass="input-group">
                <children>
                   <Label styleClass="input-label" text="Password" />
-                  <TextField prefHeight="25.0" prefWidth="450.0" styleClass="password-field" />
+                  <TextField fx:id="tfPassword" prefHeight="25.0" prefWidth="450.0" styleClass="password-field" />
                </children>
             </VBox>
             <HBox prefHeight="49.0" prefWidth="450.0" styleClass="options-row">
@@ -51,7 +51,7 @@
             </HBox>
             <HBox prefHeight="92.0" prefWidth="450.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="46.0" prefWidth="448.0" styleClass="btn-primary" text="Login" />
+                  <Button fx:id="btnLogin" mnemonicParsing="false" prefHeight="46.0" prefWidth="448.0" styleClass="btn-primary" text="Login" />
                </children>
             </HBox>
             <HBox prefHeight="43.0" prefWidth="450.0">
@@ -76,7 +76,7 @@
                <children>
                   <Label text="Don't have an account ?" />
                   <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
-                  <Hyperlink text="Sign up Here" />
+                  <Hyperlink fx:id="hplSingup" text="Sign up Here" />
                </children>
             </HBox>
          </children>

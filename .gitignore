@@ -1,0 +1,10 @@
+GestionAssurance/target/
+
+.vs/
+bin/
+obj/
+
+*.user
+*.suo
+*.userosscache
+*.vsidx
