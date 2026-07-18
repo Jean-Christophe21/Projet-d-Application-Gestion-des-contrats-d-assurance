@@ -1,0 +1,116 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+
+/* ==========================================================================
+   FEUILLE DE STYLE ADAPTÉE À LA STRUCTURE DE L'APPLICATION D'ASSURANCE
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. STRUCTURE PRINCIPALE
+   -------------------------------------------------------------------------- */
+.root {
+    -fx-font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    -fx-font-size: 14;
+}
+
+/* Zone centrale dynamique (StackPane) */
+.stack-pane {
+    -fx-background-color: #F1F5F9; /* Couleur du Dashboard */
+}
+
+
+/* --------------------------------------------------------------------------
+   2. TOPBAR (HBox du haut) -> Couleur #1E293B
+   -------------------------------------------------------------------------- */
+.topbar {
+    -fx-background-color: #1E293B;
+    -fx-min-height: 60;
+    -fx-max-height: 60;
+    -fx-padding: 0 20 0 20;
+    -fx-alignment: center-left;
+    -fx-border-color: #334155;
+    -fx-border-width: 0 0 1 0; /* Ligne fine sous la topbar */
+}
+
+/* Titre "Home Page" */
+.topbar .app-title {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
+}
+
+/* Nom d'utilisateur "username" */
+.topbar .user-label {
+    -fx-text-fill: #E2E8F0;
+    -fx-font-weight: bold;
+}
+
+
+/* --------------------------------------------------------------------------
+   3. SIDEBAR (VBox de gauche) -> Couleur #0F172A
+   -------------------------------------------------------------------------- */
+.sidebar {
+    -fx-background-color: #0F172A;
+    -fx-min-width: 240;
+    -fx-max-width: 240;
+    -fx-padding: 15 10 15 10;
+}
+
+
+/* --------------------------------------------------------------------------
+   4. BOUTONS DE NAVIGATION ET EFFETS AU SURVOL (HOVER)
+   -------------------------------------------------------------------------- */
+
+/* Style par défaut des boutons de la sidebar */
+.sidebar .button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 6;
+    -fx-alignment: center-left;
+    -fx-padding: 12 15 12 15;
+    -fx-cursor: hand;
+    -fx-max-width: 9999; /* Correspond à MAX_VALUE dans Scene Builder */
+}
+
+/* Cibler le Label à l'intérieur du bouton standard pour lui donner la bonne couleur */
+.sidebar .button .label {
+    -fx-text-fill: #94A3B8;
+    -fx-font-size: 14;
+    -fx-font-weight: normal;
+}
+
+/* EFFET HOVER : Changement de couleur lors du survol */
+.sidebar .button:hover {
+    -fx-background-color: #1E293B; /* Devient un peu plus clair */
+}
+
+/* Changement de couleur du texte à l'intérieur lors du survol */
+.sidebar .button:hover .label {
+    -fx-text-fill: #F8FAFC;
+}
+
+
+/* STYLE DE L'ONGLET ACTIF (Ex: Si le bouton Dashboard est sélectionné) -> Couleur #2563EB */
+.sidebar .button-active {
+    -fx-background-color: #2563EB;
+    -fx-background-radius: 6;
+    -fx-alignment: center-left;
+    -fx-padding: 12 15 12 15;
+    -fx-max-width: 9999;
+}
+
+/* Texte à l'intérieur de l'onglet actif */
+.sidebar .button-active .label {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+}
+
+/* Effet survol sur l'onglet actif */
+.sidebar .button-active:hover {
+    -fx-background-color: #1D4ED8; /* Bleu un peu plus foncé */
+}
